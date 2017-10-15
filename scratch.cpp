@@ -484,6 +484,7 @@ st&f26(node*s,vector<st*>&param) {//list:contains:
 			if(i.ty==2&&i.c==c.c)flag=true;
 		}	
 	}
+	b.ty=2;
 	b.c=(flag?"T":"F");
 	destroy(&c);
 	return b;
@@ -519,7 +520,8 @@ st&f29(node*s,vector<st*>&param) {//readVariable
 st&f30(node*s,vector<st*>&param) {//rounded
 	auto&b=run(s->n->c,param);
 	if(b.ty==0)return b;
-	b.b=round(b.b);
+	b.ty=0;
+	b.a=round(b.b);
 	return b;
 }
 st&f31(node*s,vector<st*>&param) {//setVar:to:
